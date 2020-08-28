@@ -1,1 +1,12 @@
-<p>stories works!</p>
+<div class='details'>
+    <h1 class='title'>Best Stories</h1>
+    <div class='item-detail' *ngFor="let storie of storiesDetails">    
+        <app-item-detail [itemDetails]='storie'></app-item-detail>
+    </div>
+    <app-pagination [maxPages]='maxPages' 
+                    [currentPage]='currentPage'
+                    (previous)='goToPage($event)'
+                    (next)='goToPage($event)'
+                    class='pagination'>
+    </app-pagination>
+</div>

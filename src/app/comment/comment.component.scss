@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+
+.comment, .story-title {
+    margin-bottom: 20px;
+}
+
+.sub-comment{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}

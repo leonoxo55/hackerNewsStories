@@ -1,0 +1,56 @@
+@import '~@angular/material/theming';
+
+
+.mat-card {
+  background-color: #d8ffab;
+  align-items: center;
+  display: flex;
+  padding: 24px 24px 24px 0;
+  justify-content: center;
+}
+
+.content {
+  margin-left: 30px;
+}
+
+.large-points {
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: center;
+  width: 90px;
+}
+
+.mat-card-title {
+  color: rgba(0, 0, 0, 0.54);
+
+  font-weight: normal;
+
+  a {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+  }
+}
+
+.mat-card-subtitle {
+  margin: 0;
+
+  span {
+    margin-right: 2px;
+  }
+
+  span + span {
+    margin-left: 2px;
+  }
+}
+
+@media(max-width: 399px) {
+
+  .mat-card {
+    padding: 16px;
+  }
+
+  .large-points {
+    display: none;
+  }
+}

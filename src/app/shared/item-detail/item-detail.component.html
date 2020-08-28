@@ -1,0 +1,25 @@
+<mat-card>
+    <div class="content">
+        <!-- Title with url of the new -->
+        <mat-card-title *ngIf="itemDetails.title">
+            <a [href]="itemDetails.url" target="_blank" >{{ itemDetails.title }}</a >  
+        </mat-card-title>
+        <!-- type of the new -->
+        <mat-card-subtitle>
+            <span >
+              {{ itemDetails.type }}
+            </span>
+          </mat-card-subtitle>
+
+        <!-- Metadata of the new -->
+        <mat-card-content>
+            <span class="large-points">
+                {{itemDetails.score}} points
+            </span>
+             | Publishing date: {{itemDetails.time * 1000 | date:'yyyy-MM-dd HH:mm:ss'}} | By {{itemDetails.by}} 
+            |   <span *ngIf="itemDetails.kids && itemDetails.type=='story'">
+                    <a  [routerLink]="['/item', itemDetails.id]">{{itemDetails.kids.length}} comments</a>
+                </span>
+        </mat-card-content>
+    </div> 
+</mat-card>

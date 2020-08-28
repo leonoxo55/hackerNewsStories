@@ -1,0 +1,26 @@
+<mat-card>
+    <div class="content">
+        <!-- Title -->
+        <mat-card-title class='comment-title'>
+            <span>Posted By: {{comment.by}}</span>
+            <span>Publishing date: {{comment.time * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+        </mat-card-title>
+
+        <!-- Metadata of the new -->
+        <mat-card-content class='comment-body'>
+            <code [innerHTML]="toHTML(comment.text)">
+            </code>
+        </mat-card-content>
+        <mat-card-actions>
+            <button
+                mat-icon-button
+                (click)="searchSubComment()"
+                [disabled]="!comment.kids"
+                title="Show more comments"
+                class="shoeMore">
+            Show more comments
+            </button>
+        </mat-card-actions> 
+    </div> 
+</mat-card>
+

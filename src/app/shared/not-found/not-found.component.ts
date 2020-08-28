@@ -1,13 +1,13 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-errors',
-  templateUrl: './errors.component.html',
+  selector: 'app-not-found',
+  templateUrl: './not-found.component.html',
   styles: [
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ErrorsComponent implements OnInit {
+export class NotFoundComponent implements OnInit {
 
   constructor() { }
 

@@ -1,0 +1,46 @@
+@import '~@angular/material/theming';
+
+:host {
+  left: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 101;
+}
+
+.container {
+  align-items: center;
+  color: rgba(#fff, 0.7);
+  display: flex;
+}
+
+.logo {
+  margin-right: 14px;
+
+  img {
+    display: block;
+    width: 60px;
+  }
+}
+
+a {
+  color: inherit;
+  font-weight: normal;
+  display: flex;
+
+  &.active {
+    color: #fff;
+  }
+}
+span {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+
+@media(max-width: 399px) {
+
+  .logo {
+    margin-right: 7px;
+  }
+}

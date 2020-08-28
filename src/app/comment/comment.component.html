@@ -1,0 +1,18 @@
+<div>
+    <div class="story-title">
+        <app-item-detail class='story-title' [itemDetails]='actualStorie'></app-item-detail>
+    </div>
+    <div class="comment" *ngFor="let item of comments">
+        <app-basic-comment [comment]='item' 
+                            [subComments]='subComments'
+                            (getSubcomments)='getsubComments($event)'>            
+        </app-basic-comment>
+        <div *ngFor="let subItem of item.comments">
+            <div class='sub-comment'>
+                <app-basic-comment [comment]='subItem' 
+                                (getSubcomments)='getsubComments($event)'>            
+                </app-basic-comment>
+            </div>
+        </div>
+    </div>
+</div>
